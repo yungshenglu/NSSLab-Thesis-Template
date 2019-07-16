@@ -1,6 +1,6 @@
 # NSSLab Thesis Template
 
-本專案目前支援 IEEE 論文模板
+本專案目前僅支援 IEEE 論文模板
 
 ---
 ## Compilation
@@ -22,12 +22,18 @@
 ---
 ## File Structure
 
-* [`main.tex`](main.tex) - 論文主要檔案
-* [`Class/`](Class/) - 論文格式設定
-* [`Chapters/`](Chapters/) - 論文主要內容
-* [`Bib/`](Bib/) - 論文參考書目
-* [`Figures/`](Figures/) - 論文圖片
-* [`Output/`](Output/) - 輸出 PDF 檔案
+* [`main.tex`](main.tex)：論文主要檔案
+* [`GNUmakefile`](GNUmakefile)：編譯 LaTex 檔案所用，生成的 PDF 檔案會在 `Output/` 資料夾下
+* [`Class/`](Class/)：論文格式設定
+    * [`IEEEtran.cls`]：IEEE 論文格式
+    * [`main.sty`]：設定常用的共同參數
+* [`Chapters/`](Chapters/)：論文主要內容 (可自行新增)
+    * [`main.tex`]：引入各章節的檔案所用
+* [`Bib/`](Bib/)：論文參考書目
+    * [`main.tex`]：引入 `thesis.bib` 所用
+    * [`thesis.bib`]：參考書目的內容
+* [`Figures/`](Figures/)：論文圖片 (可自行新增)
+* [`Output/`](Output/)：輸出 PDF 檔案
 
 ---
 ## Useful Plugins
