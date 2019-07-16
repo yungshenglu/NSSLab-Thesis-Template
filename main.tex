@@ -1,0 +1,42 @@
+% Set the class of document by IEEE
+\documentclass[conference]{Class/IEEEtran}
+% Include the common settings
+\usepackage{Class/main}
+
+\IEEEoverridecommandlockouts
+
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage[small]{caption}
+\usepackage{graphicx, epsfig}
+\usepackage{subfigure}
+\usepackage[noend]{algorithmic}
+\usepackage[ruled,vlined, linesnumbered]{algorithm2e}
+\usepackage{cite} 
+\usepackage{verbatim}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{textcomp}
+\usepackage{xcolor}
+
+% Set the path and the extension of figures
+\graphicspath{{./Figures/}}
+\DeclareGraphicsExtensions{.pdf, .pbg, .jpg, .eps}
+\DeclareGraphicsRule{.pdf}{eps}{.bb}{}
+\DeclareGraphicsRule{.jpg}{eps}{.bb}{}
+\DeclareGraphicsRule{.png}{eps}{.bb}{}
+\setlength\textfloatsep{.7\baselineskip}
+
+\begin{document}
+	% Title of thesis
+	\title{\enTitle}
+	\author{
+		\enStudentName \ and \enAdvisorName \\
+		\enDeptName, \enUnivName , \enCont \\
+		\studentEmail, \advisorEmail
+	}
+	\maketitle
+
+	% Import the main part of content
+	\input{Chapters/main.tex}
+	% Import the bibliography
+	\input{Bib/main.tex}
+\end{document}
