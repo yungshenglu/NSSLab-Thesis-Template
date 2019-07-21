@@ -17,8 +17,13 @@
     * [Overleaf](https://www.overleaf.com)
 
 ---
-## Compilation
+## Usage
 
+0. 下載此專案
+    ```bash
+    # Make sure your current directory is correct
+    $ git clone https://gitlab.com/nsslab/NSS_Website
+    ```
 1. 執行以下指令進行編譯
     ```bash
     # Make sure your current directory is correct
@@ -39,42 +44,29 @@
 ```bash
 # In alphabetical order
 nsslab-thesis-template
-├── Bib/                        # 參考書目
-│   └── thesis.bib
-├── Chapters/                   # 論文各節內容 (可自行新增)
+├── Bib/                        # * 參考書目
+│   └── thesis.bib              #   參考書目的內容 (自行編輯)
+├── Chapters/                   # * 論文各節內容 (可自行新增)
 │   ├── 0-Abstract.tex
 │   ├── 1-Introduction.tex
 │   ├── 2-RelatedWork.tex
 │   ├── 3-Design.tex
 │   ├── 4-Evaluation.tex
 │   └── 5-Conclusion.tex
-├── Class/                      # 論文模板
-│   └── IEEEtran.cls
-├── Config/                     # 相關參數設定
-│   └── config.tex              
-├── Figurs/                     # 論文圖片 (可自行新增)
+├── Class/                      # * 論文模板
+│   └── IEEEtran.cls            #   IEEE 論文格式 (不需更動)
+├── Config/                     # * 相關參數設定
+│   └── config.tex              #   設定論文題目、作者資訊等 (自行編輯)
+├── Figurs/                     # * 論文圖片 (可自行新增)
 │   └── ...
 ├── .gitignore                  # 檔案忽略清單 (不需更動)
-├── CONTRIBUTING.md             # 說明文件：如何貢獻本專案
-├── GNUmakefile                 # 編譯論文檔案所用 
+├── CONTRIBUTING.md             # 說明文件：如何貢獻本專案 (不需更動)
+├── GNUmakefile                 # 編譯論文檔案所用，生成的 PDF 檔案會在 `Output/` 資料夾下 (不需更動)
 ├── LICENSE                     # 專案授權 (不需更動)
-├── main.tex                    # 論文主要檔案
+├── main.tex                    # 論文主要檔案 (自行編輯)
 ├── main.pdf                    # 論文輸出檔案
 └── README.md                   # 說明文件 (本檔案)
 ```
-
-* [`main.tex`](main.tex)：論文主要檔案
-* [`main.pdf`](main.pdf)：論文輸出檔案
-* [`GNUmakefile`](GNUmakefile)：編譯論文檔案所用，生成的 PDF 檔案會在 `Output/` 資料夾下
-* [`Bib/`](Bib/)：論文參考書目
-    * [`main.tex`](Bib/main.tex)：引入 `thesis.bib` 所用
-    * [`thesis.bib`](Bib/thesis.bib)：參考書目的內容
-* [`Chapters/`](Chapters/)：論文各節內容 (可自行新增)
-* [`Class/`](Class/)：論文模板
-    * [`IEEEtran.cls`](Class/IEEEtran.cls)：IEEE 論文格式
-* [`Config/`](Config/)：相關參數設定
-    * [config.tex](Config/config.tex)：設定論文題目、作者資訊等
-* [`Figures/`](Figures/)：論文圖片 (可自行新增)
 
 ---
 ## Useful Plugins
