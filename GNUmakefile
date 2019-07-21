@@ -16,9 +16,9 @@ $P.dvi	: $(wildcard *.tex Chapters/*.tex Bib/*.bib Figures/*.eps)
 	latex  $P < /dev/null || $(RM) $@
 
 pdf  : $P.ps
-	ps2pdf -sPAPERSIZE=letter -dEmbedAllFonts=true -dSubsetFonts=true -dEPSCrop=true ./Output/$P.ps ./Output/$P.pdf
-#	dvipdf  ./Output/$P
-#	dvipdfm -p letter -o ./Output/$P.pdf ./Output/$P.dvi
+	ps2pdf -sPAPERSIZE=letter -dEmbedAllFonts=true -dSubsetFonts=true -dEPSCrop=true ./$P.ps ./$P.pdf
+#	dvipdf  ./$P
+#	dvipdfm -p letter -o ./$P.pdf ./$P.dvi
 
 outline	: $(wildcard *.tex Chapters/*.tex Bib/*.bib Figures/*.eps)
 	latex  $O < /dev/null || $(RM) $@
