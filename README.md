@@ -95,7 +95,7 @@ nsslab-thesis-template
 
 > **NOTICE:** You can follow the contributing process [CONTRIBUTING.md](CONTRIBUTING.md) to join me. I am very welcome any issue!
 
-This website is dedicatd for all members in Networking and Sensing Systems Laboratory (NSSLAB).
+This repository is dedicatd for all members in Networking and Sensing Systems Laboratory (NSSLAB).
 
 * [David Lu](https://github.com/yungshenglu)
 
