@@ -1,42 +1,92 @@
+%----------------------------------------------------------------------
+% MAIN PROGRAM OF PAPER
+%----------------------------------------------------------------------
+
 % Set the class of document by IEEE
 \documentclass[conference]{Class/IEEEtran}
-% Include the common settings
-\usepackage{Class/main}
 
-\IEEEoverridecommandlockouts
+%----------------------------------------------------------------------
+% PACKAGE LOADING
+%----------------------------------------------------------------------
 
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+% Customising captions in floating environments
 \usepackage[small]{caption}
+% Enhanced support for graphics and include Encapsulated PostScript
 \usepackage{graphicx, epsfig}
+% For ma­nip­u­la­tion and ref­er­ence of small or subfig­ures and ta­bles
 \usepackage{subfigure}
+% For algorithms handling
 \usepackage[noend]{algorithmic}
-\usepackage[ruled,vlined, linesnumbered]{algorithm2e}
+% Floating algorithm environment with algorithmic keywords
+\usepackage[ruled, vlined, linesnumbered]{algorithm2e}
+% Improved citation handling
 \usepackage{cite} 
+% Reimplementation of and extensions
 \usepackage{verbatim}
+% For AMS mathematical facilities
 \usepackage{amsmath, amssymb, amsfonts}
+% For the Text Companion fonts
 \usepackage{textcomp}
+% Driver-independent color extensions
 \usepackage{xcolor}
+
+%----------------------------------------------------------------------
+% CONFIGURATION
+%----------------------------------------------------------------------
+
+% HINT: Fill in your information of this thesis in "Config/config.tex"
+\input{Config/config}
 
 % Set the path and the extension of figures
 \graphicspath{{./Figures/}}
-\DeclareGraphicsExtensions{.pdf, .pbg, .jpg, .eps}
+% Declare the order of filename extensions to try
+\DeclareGraphicsExtensions{.pdf, .png, .jpg, .eps}
+% Declare how to handle graphic files whose names end in extension
 \DeclareGraphicsRule{.pdf}{eps}{.bb}{}
 \DeclareGraphicsRule{.jpg}{eps}{.bb}{}
 \DeclareGraphicsRule{.png}{eps}{.bb}{}
+% Declare the space between figure and text
 \setlength\textfloatsep{.7\baselineskip}
 
+%----------------------------------------------------------------------
+% MAIN CONTENT
+%----------------------------------------------------------------------
+
 \begin{document}
-	% Title of thesis
+	%%% IEEE COPYRIGHT NOTICE %%%
+	\IEEEoverridecommandlockouts
+
+	%%% TITLE %%%
+	% HINT:
+	% 1. Fill in your information of this thesis in "Config/config.tex"
+	% 2. Add the third (or more) author's info in "Config/config.tex" by yourself if needed
+	% 2. The naming convesion of author's info is ordered by "A, B, C"
+	% 3. Remember to append the third author in the following title
 	\title{\enTitle}
 	\author{
-		\enStudentName \ and \enAdvisorName \\
-		\enDeptName, \enUnivName , \enCont \\
-		\studentEmail, \advisorEmail
+		% HINT: Append the third (or more) author here
+		\enAuthorNameA \ and \enAuthorNameB \\
+		\enDeptName, \enUnivName, \enLocation \\
+		% HINT: Append the third (or more) author's email here
+		\authorEmailA, \authorEmailB
 	}
 	\maketitle
 
-	% Import the main part of content
-	\input{Chapters/main.tex}
-	% Import the bibliography
-	\input{Bib/main.tex}
+	%%% CHAPTERS %%%
+	% HINT: 
+	% 1. Arrange the order of all chapters here
+	% 2. Add your chapters as follow
+	\input{Chapters/0-Abstract}
+	\input{Chapters/1-Introduction}
+	\input{Chapters/2-RelatedWork}
+	\input{Chapters/3-Design}
+	\input{Chapters/4-Evaluation}
+	\input{Chapters/5-Conclusion}
+
+	%%% BIBLIOGRAPHY %%%
+	% Set the style of bibliography
+	\bibliographystyle{IEEEtran}
+	% Include bibliography
+	\bibliography{Bib/thesis.bib}
+
 \end{document}
